@@ -8,6 +8,6 @@ public interface ChapitreService {
 	public List<Chapitre> getAll();
 	public void deleteChapitre(int id);
 	public void modifierChapitre(int id, Chapitre c);
-	public List<Chapitre> findSyllabusByIdModule(int id);
+	public List<Chapitre> findSyllabusByIdModule(int id, int vers);
 	Chapitre getOne(int id);
 }

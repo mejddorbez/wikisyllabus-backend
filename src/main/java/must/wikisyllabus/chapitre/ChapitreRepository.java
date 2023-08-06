@@ -10,5 +10,5 @@ import must.wikisyllabus.module.Module;
 @Repository
 public interface ChapitreRepository extends JpaRepository<Chapitre, Integer> {
 
-	public List<Chapitre> findChapitresByModule(Module m);
+	public List<Chapitre> findChapitresByModuleAndVersionSyllabus(Module m, int version);
 }

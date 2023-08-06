@@ -43,8 +43,10 @@ public class ChapitreController {
 		chapitreService.modifierChapitre(id, u);
 	}
 	
-	@GetMapping("syllabus/{id}")
-	public List<Chapitre> findSyllabusByIdModule(@PathVariable(name="id") int id) {
-		return chapitreService.findSyllabusByIdModule(id);
+	@GetMapping("syllabus/{id}/{vers}")
+	public List<Chapitre> findSyllabusByIdModule(
+			@PathVariable(name="id") int id,
+			@PathVariable(name="vers") int vers) {
+		return chapitreService.findSyllabusByIdModule(id, vers);
 	}
 }

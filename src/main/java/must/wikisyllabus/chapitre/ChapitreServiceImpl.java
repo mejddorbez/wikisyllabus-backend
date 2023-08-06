@@ -45,8 +45,8 @@ public class ChapitreServiceImpl implements ChapitreService {
 	}
 
 	@Override
-	public List<Chapitre> findSyllabusByIdModule(int id) {
+	public List<Chapitre> findSyllabusByIdModule(int id, int vers) {
 		Module m = moduleRepo.findById(id).get();
-		return chapitreRepo.findChapitresByModule(m);
+		return chapitreRepo.findChapitresByModuleAndVersionSyllabus(m, vers);
 	}
 }
